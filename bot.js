@@ -26,9 +26,9 @@ listener.on("message", (msg) => {
   try {
     // record your toots
     if (
-      msg.data.account.id === userId &&
       msg.data.visibility == "public" &&
-      msg.event == "update"
+      msg.event == "update" &&
+      msg.data.account.id === userId
     ) {
       const newToot = new Toot(msg);
       newToot
