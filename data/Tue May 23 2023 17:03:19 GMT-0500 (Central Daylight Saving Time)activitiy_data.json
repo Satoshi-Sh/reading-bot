@@ -1,0 +1,142 @@
+{
+  "event": "notification",
+  "data": {
+    "id": "3551440",
+    "type": "favourite",
+    "created_at": "2023-05-23T22:03:18.980Z",
+    "account": {
+      "id": "182304",
+      "username": "sato1108ss",
+      "acct": "sato1108ss@polyglot.city",
+      "display_name": "Satoshi_ss",
+      "locked": false,
+      "bot": false,
+      "discoverable": false,
+      "group": false,
+      "created_at": "2018-08-26T00:00:00.000Z",
+      "note": "<p>I am from Japan. I live in Canada. I worked in a Tacos restaurant. I learned Spanish there. </p><p>English(in progress) Spanish(1 year) Japanese(My mother tongue)</p>",
+      "url": "https://polyglot.city/@sato1108ss",
+      "avatar": "https://6-28.mastodon.xyz/accounts/avatars/000/182/304/original/7fb09f1051ae4f1d.jpeg",
+      "avatar_static": "https://6-28.mastodon.xyz/accounts/avatars/000/182/304/original/7fb09f1051ae4f1d.jpeg",
+      "header": "https://mastodon.xyz/headers/original/missing.png",
+      "header_static": "https://mastodon.xyz/headers/original/missing.png",
+      "followers_count": 29,
+      "following_count": 29,
+      "statuses_count": 369,
+      "last_status_at": "2023-05-23",
+      "emojis": [],
+      "fields": []
+    },
+    "status": {
+      "id": "110390478306478140",
+      "created_at": "2023-05-18T15:50:22.991Z",
+      "in_reply_to_id": "110386769221027960",
+      "in_reply_to_account_id": "64573",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "en",
+      "uri": "https://mastodon.xyz/users/sato1108ss/statuses/110390478306478140",
+      "url": "https://mastodon.xyz/@sato1108ss/110390478306478140",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 3,
+      "edited_at": null,
+      "favourited": false,
+      "reblogged": false,
+      "muted": false,
+      "bookmarked": false,
+      "pinned": true,
+      "content": "<p>Completed making readme.md.   I added this gif to show the application outlook.</p>",
+      "filtered": [],
+      "reblog": null,
+      "application": {
+        "name": "Web",
+        "website": null
+      },
+      "account": {
+        "id": "64573",
+        "username": "sato1108ss",
+        "acct": "sato1108ss",
+        "display_name": "Satoshi S.",
+        "locked": false,
+        "bot": false,
+        "discoverable": true,
+        "group": false,
+        "created_at": "2017-05-12T00:00:00.000Z",
+        "note": "<p>Classical Guitar.🎸  Keyboard. Canada(September 2016-)<br />I boost pics of dogs.✔<br />Estoy aprendiendo Espanol.🌮<br />Learning programming and Data Analytics👀<br />I speak Japanese🍣</p>",
+        "url": "https://mastodon.xyz/@sato1108ss",
+        "avatar": "https://6-28.mastodon.xyz/accounts/avatars/000/064/573/original/bdd8946725bf90cf.jpg",
+        "avatar_static": "https://6-28.mastodon.xyz/accounts/avatars/000/064/573/original/bdd8946725bf90cf.jpg",
+        "header": "https://6-28.mastodon.xyz/accounts/headers/000/064/573/original/11b9153de6512de4.jpg",
+        "header_static": "https://6-28.mastodon.xyz/accounts/headers/000/064/573/original/11b9153de6512de4.jpg",
+        "followers_count": 174,
+        "following_count": 275,
+        "statuses_count": 6787,
+        "last_status_at": "2023-05-23",
+        "noindex": false,
+        "emojis": [],
+        "roles": [],
+        "fields": [
+          {
+            "name": "my music",
+            "value": "<a href=\"https://www.bandlab.com/satoss\" target=\"_blank\" rel=\"nofollow noopener noreferrer me\"><span class=\"invisible\">https://www.</span><span class=\"\">bandlab.com/satoss</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "data analytics portfolio",
+            "value": "<a href=\"https://www.kaggle.com/satoshiss\" target=\"_blank\" rel=\"nofollow noopener noreferrer me\"><span class=\"invisible\">https://www.</span><span class=\"\">kaggle.com/satoshiss</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "my website",
+            "value": "<a href=\"https://satoshi40.pythonanywhere.com/\" target=\"_blank\" rel=\"nofollow noopener noreferrer me\"><span class=\"invisible\">https://</span><span class=\"\">satoshi40.pythonanywhere.com/</span><span class=\"invisible\"></span></a>",
+            "verified_at": null
+          },
+          {
+            "name": "Github",
+            "value": "<a href=\"https://github.com/Satoshi-Sh\" target=\"_blank\" rel=\"nofollow noopener noreferrer me\"><span class=\"invisible\">https://</span><span class=\"\">github.com/Satoshi-Sh</span><span class=\"invisible\"></span></a>",
+            "verified_at": "2023-04-07T21:11:02.502+00:00"
+          }
+        ]
+      },
+      "media_attachments": [
+        {
+          "id": "110390441592723538",
+          "type": "gifv",
+          "url": "https://6-28.mastodon.xyz/media_attachments/files/110/390/441/592/723/538/original/ac274556fba61652.mp4",
+          "preview_url": "https://6-28.mastodon.xyz/media_attachments/files/110/390/441/592/723/538/small/ac274556fba61652.png",
+          "remote_url": null,
+          "preview_remote_url": null,
+          "text_url": null,
+          "meta": {
+            "original": {
+              "width": 1018,
+              "height": 856,
+              "frame_rate": "10/1",
+              "duration": 44.3,
+              "bitrate": 423437
+            },
+            "small": {
+              "width": 400,
+              "height": 336,
+              "size": "400x336",
+              "aspect": 1.1904761904761905
+            },
+            "focus": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "description": "My application demo gif.",
+          "blurhash": "U3S?GbxuV@%g9YRixuof0JRPt6j[I.RiaeoL"
+        }
+      ],
+      "mentions": [],
+      "tags": [],
+      "emojis": [],
+      "card": null,
+      "poll": null
+    }
+  }
+}
