@@ -19,12 +19,10 @@ const M = new Mastodon({
 const listener = M.stream("streaming/user");
 
 listener.on("message", (msg) => {
-  const currentDate = new Date();
-  const dateString = currentDate.toString();
-  const filePath = `data/${dateString}activitiy_data.json`;
-
   try {
     // record your toots
+    console.log("working?");
+    console.log(userId, msg);
     if (
       msg.data.visibility == "public" &&
       msg.event == "update" &&
