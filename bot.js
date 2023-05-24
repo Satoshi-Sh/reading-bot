@@ -21,8 +21,6 @@ const listener = M.stream("streaming/user");
 listener.on("message", (msg) => {
   try {
     // record your toots
-    console.log("working?");
-    console.log(userId, msg);
     if (
       msg.data.visibility == "public" &&
       msg.event == "update" &&
