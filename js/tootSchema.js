@@ -56,16 +56,34 @@ const tootSchema = new mongoose.Schema({
       ],
     },
     media_attachments: [
-      {id:String,
-      type:String,
-      url:String,
-      preview_url:String,
-      remote_url:String,
-      preview_remote_url:String,
-      text_url:String,
-      meta: {type:Schema.Types.Mixed},
-      description:String,
-      blurhash:String}
+      {
+        id: String,
+        type: String,
+        url: String,
+        preview_url: String,
+        remote_url: String,
+        text_url: String,
+        meta: {
+          original: {
+            width: Number,
+            height: Number,
+            size: String,
+            aspect: Number,
+          },
+          small: {
+            width: Number,
+            height: Number,
+            size: String,
+            aspect: Number,
+          },
+          focus: {
+            x: Number,
+            y: Number,
+          },
+        },
+        description: String,
+        blurhash: String,
+      }
     ], // Assuming media_attachments is an array of strings
     mentions: [
       {
