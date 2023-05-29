@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const {Schema} = mongoose;
 
 const tootSchema = new mongoose.Schema({
   event: String,
@@ -54,7 +55,18 @@ const tootSchema = new mongoose.Schema({
         },
       ],
     },
-    media_attachments: [String], // Assuming media_attachments is an array of strings
+    media_attachments: [
+      {id:string,
+      type:string,
+      url:string,
+      preview_url:string,
+      remote_url:string,
+      preview_remote_url:string,
+      text_url:string,
+      meta: {type:Schema.Types.Mixed},
+      description:string,
+      blurhash:string}
+    ], // Assuming media_attachments is an array of strings
     mentions: [
       {
         id: String,

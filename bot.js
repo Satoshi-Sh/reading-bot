@@ -1,14 +1,12 @@
 const Mastodon = require("mastodon-api");
-const fs = require("fs");
-const connectDB = require("./js/connect.js");
+const {connect} = require('./js/connect.js'); // Assuming `connect.js` exports the connect function
 const Toot = require("./js/tootSchema");
-
 require("dotenv").config();
 
 const accessToken = process.env.ACCESS_TOKEN;
 const userId = process.env.USER_ID;
+
 console.log("reading-bot started...");
-const db = connectDB();
 
 const M = new Mastodon({
   access_token: accessToken,
@@ -16,30 +14,35 @@ const M = new Mastodon({
   api_url: "https://mastodon.xyz/api/v1/",
 });
 
-const listener = M.stream("streaming/user");
-
-listener.on("message", (msg) => {
+async function main() {
   try {
-    // record your toots
-    if (
-      msg.data.visibility == "public" &&
-      msg.event == "update" &&
-      msg.data.account.id === userId
-    ) {
-      const newToot = new Toot(msg);
-      newToot
-        .save()
-        .then(() => {
-          console.log("Toot saved successfully");
-        })
-        .catch((err) => {
-          console.error(`Failed to save toot:` + err);
-        });
-      console.log("Data written to the database successfully.");
-    }
-  } catch (error) {
-    console.error("Error writing to file:", error);
-  }
-});
+    await connect(); // Wait for MongoDB connection to be established
 
-listener.on("error", (err) => console.log(err));
+    const listener = M.stream("streaming/user");
+
+    listener.on("message", async (msg) => {
+      try {
+        // record your toots
+        if (
+          msg.data.visibility == "public" &&
+          msg.event == "update" &&
+          msg.data.account.id === userId
+        ) {
+          const newToot = new Toot(msg);
+          await newToot.save(); // Wait for the document to be saved
+          console.log('Document inserted successfully');
+          console.log('Inserted document ID:', newToot._id);
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    });
+
+    listener.on("error", (err) => console.log(err));
+  } catch (error) {
+    console.error('Error connecting to MongoDB:', error);
+  }
+}
+
+main();
+
