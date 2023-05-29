@@ -1,6 +1,35 @@
 const mongoose = require("mongoose");
 const {Schema} = mongoose;
 
+const mediaAttachmentSchema = new mongoose.Schema({
+  id: { type: String, required: true },
+  type: { type: String, required: true },
+  url: { type: String, required: true },
+  preview_url: { type: String, required: true },
+  remote_url: String,
+  text_url: String,
+  meta: {
+    original: {
+      width: Number,
+      height: Number,
+      size: String,
+      aspect: Number,
+    },
+    small: {
+      width: Number,
+      height: Number,
+      size: String,
+      aspect: Number,
+    },
+    focus: {
+      x: Number,
+      y: Number,
+    },
+  },
+  description: String,
+  blurhash: String,
+});
+
 const tootSchema = new mongoose.Schema({
   event: String,
   data: {
@@ -55,36 +84,7 @@ const tootSchema = new mongoose.Schema({
         },
       ],
     },
-    media_attachments: [
-      {
-        id: String,
-        type: String,
-        url: String,
-        preview_url: String,
-        remote_url: String,
-        text_url: String,
-        meta: {
-          original: {
-            width: Number,
-            height: Number,
-            size: String,
-            aspect: Number,
-          },
-          small: {
-            width: Number,
-            height: Number,
-            size: String,
-            aspect: Number,
-          },
-          focus: {
-            x: Number,
-            y: Number,
-          },
-        },
-        description: String,
-        blurhash: String,
-      }
-    ], // Assuming media_attachments is an array of strings
+    media_attachments: [mediaAttachmentSchema], 
     mentions: [
       {
         id: String,
