@@ -93,7 +93,7 @@ const tootSchema = new mongoose.Schema({
         acct: String,
       },
     ], // Assuming mentions is an array of strings
-    tags: [String], // Assuming tags is an array of strings
+    tags: [{name:String,url:String}], // Assuming tags is an array of strings
     emojis: [String], // Assuming emojis is an array of strings
     favourited: Boolean,
     reblogged: Boolean,
